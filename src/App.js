@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Row1 from "./components/row1";
+import Row2 from "./components/row2";
+import Row3 from "./components/row3";
+import Row4 from "./components/row4";
+import Row5 from "./components/row5";
+import Row6 from "./components/row6";
+import Title from "./components/title";
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Title />
+        <Row1 />
+        <Row2 />
+        <Row3 />
+        <Row4 />
+        <Row5 />
+        <Row6 />
+      </div>
+    );
+  }
 }
 
 export default App;

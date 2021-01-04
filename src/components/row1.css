@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(46, 45, 45);
+  color: white;
+  width: 90%;
+  font-size: 14px;
+  margin: auto;
+}
+#block1 {
+  text-align: center;
+  float: left;
+  width: 19%;
+  border-top: 5px solid hsla(210, 24%, 85%, 0.392);
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: hsla(208, 12%, 68%, 0.183);
+  margin: 10px;
+  margin-inline-start: 0;
+}
+#block2 {
+  text-align: center;
+  float: left;
+  width: 19%;
+  border-top: 5px solid hsla(210, 24%, 85%, 0.392);
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: hsla(208, 12%, 68%, 0.183);
+  margin: 10px;
+  margin-inline-start: 0;
+}
+#block3 {
+  text-align: center;
+  float: left;
+  width: 19%;
+  border-top: 5px solid hsla(210, 24%, 85%, 0.392);
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: hsla(208, 12%, 68%, 0.183);
+  margin: 10px;
+  margin-inline-start: 0;
+}
+#block4 {
+  text-align: center;
+  float: left;
+  width: 19%;
+  border-top: 5px solid hsla(210, 24%, 85%, 0.392);
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: hsla(208, 12%, 68%, 0.183);
+  margin: 10px;
+  margin-inline-start: 0;
+}
+h4 {
+  color: rgb(220, 209, 209);
+  font-size: medium;
+  font-weight: 500;
+}
+h5 {
+  color: rgb(170, 165, 165);
+}
+h1 {
+  color: white;
+  font-size: initial;
+  font-weight: 600;
+}
+#main-header {
+  margin-top: 10px;
+  text-align: center;
+}
+#main-header h4 {
+  color: slategray;
+}
+#theme1 {
+  color: white;
+  font-size: large;
+}
+#theme2 {
+  float: right;
+}
