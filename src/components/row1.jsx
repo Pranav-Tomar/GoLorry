@@ -2,44 +2,99 @@ import React, { Component } from "react";
 import "./row1.css";
 
 class Row1 extends Component {
+  state = {
+    loading: true,
+    album1: null,
+    album2: null,
+    album3: null,
+    album4: null,
+    album5: null,
+  };
+
+  async componentDidMount() {
+    const url =
+      "https://api.spotify.com/v1/artists/22bE4uQ6baNwSHPVcDxLCe/albums";
+    const response = await fetch(url);
+    const data = await response.json();
+    this.setState({
+      album1: data.items[0],
+      album2: data.items[1],
+      album3: data.items[2],
+      album4: data.items[3],
+      album5: data.items[4],
+      loading: false,
+    });
+    console.log(data);
+  }
+
   render() {
     return (
       <div className="main">
         <div className="blocks">
-          <div id="block1">
-            <h5>
-              <img src="https://picsum.photos/100" alt="ALBUM1"></img>
-            </h5>
-            <h1>Sticky Fingers</h1>
-            <h4>1971</h4>
+          <div>
+            {this.state.loading || !this.state.album1 ? (
+              <div>loading...</div>
+            ) : (
+              <div id="block1">
+                <h5>
+                  <img src={this.state.album1.images[2].url} alt="ALBUM1"></img>
+                </h5>
+                <h1>{this.state.album1.name}</h1>
+                <h4>{this.state.album1.release_date}</h4>
+              </div>
+            )}
           </div>
-          <div id="block2">
-            <h5>
-              <img src="https://picsum.photos/100" alt="ALBUM2"></img>
-            </h5>
-            <h1>Goats Head Soup</h1>
-            <h4>1973</h4>
+          <div>
+            {this.state.loading || !this.state.album2 ? (
+              <div>loading...</div>
+            ) : (
+              <div id="block2">
+                <h5>
+                  <img src={this.state.album2.images[2].url} alt="ALBUM1"></img>
+                </h5>
+                <h1>{this.state.album2.name}</h1>
+                <h4>{this.state.album2.release_date}</h4>
+              </div>
+            )}
           </div>
-          <div id="block3">
-            <h5>
-              <img src="https://picsum.photos/100" alt="ALBUM3"></img>
-            </h5>
-            <h1>The Rolling Stones</h1>
-            <h4>1964</h4>
+          <div>
+            {this.state.loading || !this.state.album3 ? (
+              <div>loading...</div>
+            ) : (
+              <div id="block3">
+                <h5>
+                  <img src={this.state.album3.images[2].url} alt="ALBUM1"></img>
+                </h5>
+                <h1>{this.state.album3.name}</h1>
+                <h4>{this.state.album3.release_date}</h4>
+              </div>
+            )}
           </div>
-          <div id="block4">
-            <h5>
-              <img src="https://picsum.photos/100" alt="ALBUM4"></img>
-            </h5>
-            <h1>Let It Bleed</h1>
-            <h4>1969</h4>
+          <div>
+            {this.state.loading || !this.state.album4 ? (
+              <div>loading...</div>
+            ) : (
+              <div id="block4">
+                <h5>
+                  <img src={this.state.album4.images[2].url} alt="ALBUM1"></img>
+                </h5>
+                <h1>{this.state.album4.name}</h1>
+                <h4>{this.state.album4.release_date}</h4>
+              </div>
+            )}
           </div>
-          <div id="block4">
-            <h5>
-              <img src="https://picsum.photos/100" alt="ALBUM5"></img>
-            </h5>
-            <h1>Some Girls</h1>
-            <h4>1978</h4>
+          <div>
+            {this.state.loading || !this.state.album5 ? (
+              <div>loading...</div>
+            ) : (
+              <div id="block4">
+                <h5>
+                  <img src={this.state.album5.images[2].url} alt="ALBUM1"></img>
+                </h5>
+                <h1>{this.state.album5.name}</h1>
+                <h4>{this.state.album5.release_date}</h4>
+              </div>
+            )}
           </div>
         </div>
       </div>
